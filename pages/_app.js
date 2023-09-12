@@ -27,7 +27,7 @@ class App extends React.Component {
 		});
 	}
 	componentDidMount() {
-		const API = "http://api.weatherapi.com/v1/current.json?";
+		const API = "https://api.weatherapi.com/v1/current.json?";
 		fetch(API + new URLSearchParams({
 			q: this.state.query,
 			key: 'ca9808709d6641a69da103943232006',
@@ -35,7 +35,7 @@ class App extends React.Component {
 	}
 	componentDidUpdate(prevProps, prevState) {
 		if (prevState.query !== this.state.query) {
-			const API = "http://api.weatherapi.com/v1/current.json?";
+			const API = "https://api.weatherapi.com/v1/current.json?";
 			fetch(API + new URLSearchParams({
 				q: this.state.query,
 				key: 'ca9808709d6641a69da103943232006',
